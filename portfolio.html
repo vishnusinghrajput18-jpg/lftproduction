@@ -1,13 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Portfolio — LFT Productions</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — LFT Productions</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .project-hero{display:flex;gap:22px;align-items:center;margin-bottom:18px}
+    .project-hero img{width:420px;height:320px;object-fit:cover;border-radius:12px}
+    .project-desc{max-width:760px}
+    .credit{color:var(--muted);font-size:14px;margin-top:8px}
+  </style>
 </head>
 <body>
-  <!-- same header (keep links) -->
   <header class="topnav">
     <div class="container" style="display:flex;align-items:center;justify-content:space-between">
       <a href="index.html" class="brand">
@@ -23,34 +28,51 @@
     </div>
   </header>
 
-  <main class="container" style="padding-top:30px">
-    <h2>Portfolio</h2>
-    <p style="color:var(--muted)">Selected projects and productions. Click any image to preview.</p>
+  <main class="container" style="padding-top:28px">
+    <h1 style="margin-bottom:8px">Portfolio</h1>
+    <p style="color:var(--muted);max-width:900px">LFT Productions specializes in producing high-impact fashion events, cinematic music videos and short films. Below are selected projects showing our scope — from creative direction and production design to casting, technical staging and post-production.</p>
 
-    <div class="grid-3" style="margin-top:14px">
-      <div class="card"><img src="model2.jpg"><h3>Mystique Fashion Show</h3><p class="muted">Runway and production.</p></div>
-      <div class="card"><img src="model3.jpg"><h3>Music Video — Fly</h3><p class="muted">Cinematic shoot.</p></div>
-      <div class="card"><img src="model4.jpg"><h3>Short Film — Neon Nights</h3><p class="muted">Festival entry.</p></div>
-      <div class="card"><img src="model5.jpg"><h3>Editorial Shoot</h3><p class="muted">Fashion editorial.</p></div>
-      <div class="card"><img src="model6.jpg"><h3>Bridal Lookbook</h3><p class="muted">Designer showcase.</p></div>
-      <div class="card"><img src="model7.jpg"><h3>Evening Gala</h3><p class="muted">Celebrity appearances.</p></div>
-    </div>
+    <!-- Project 1 -->
+    <section class="project-hero" style="margin-top:22px">
+      <img src="model2.jpg" alt="Mystique Fashion Show">
+      <div class="project-desc">
+        <h2 style="margin:0">Mystique Fashion Show — Runway Production</h2>
+        <p class="credit">Date: Nov 2024 · Role: Production Lead · Scale: 20 designers, live music, 1,200 audience</p>
+        <p style="color:var(--muted)">Concept: A curated runway evening showcasing emerging designers and high-fashion couture. We handled stage concept, set construction, model coordination, music direction and live show timing. Production highlights include a modular stage with dynamic lighting cues and a synchronized soundtrack to elevate designer reveals.</p>
+        <p style="color:var(--muted)"><strong>Services provided:</strong> Creative direction, stage design, back-stage coordination, lighting design, live production management, post-event documentation.</p>
+      </div>
+    </section>
+
+    <!-- Project 2 -->
+    <section class="project-hero">
+      <img src="model3.jpg" alt="Music Video">
+      <div class="project-desc">
+        <h2>Music Video — "Fly"</h2>
+        <p class="credit">Date: Aug 2024 · Role: Producer & Location Manager · Crew: 30+</p>
+        <p style="color:var(--muted)">Overview: A cinematic music video shot across three heritage sites. We managed location permissions, transport logistics, production scheduling and on-set crew coordination. Post-production included color grading to deliver a filmic tone and custom sound design to match the visual narrative.</p>
+        <p style="color:var(--muted)"><strong>Services provided:</strong> Location scouting, production logistics, director coordination, editing and color grading.</p>
+      </div>
+    </section>
+
+    <!-- Project 3 -->
+    <section class="project-hero">
+      <img src="model4.jpg" alt="Short Film">
+      <div class="project-desc">
+        <h2>Short Film — "Neon Nights"</h2>
+        <p class="credit">Date: Mar 2024 · Role: Line Producer · Outcome: Festival selections</p>
+        <p style="color:var(--muted)">Production note: Independent short film with tight budget and festival timeline. We supported casting, location logistics, production scheduling, and final delivery for festival screenings — including sound mix and festival submission formatting.</p>
+        <p style="color:var(--muted)"><strong>Services provided:</strong> Casting, set management, technical support, post-production supervision, festival submissions.</p>
+      </div>
+    </section>
+
+    <section style="margin-top:28px">
+      <h3>About LFT Productions</h3>
+      <p style="color:var(--muted);max-width:900px">Founded to bridge fashion and cinematic storytelling, LFT Productions operates as a full-service production company. We partner with designers, musicians, stylists and brands to deliver bold visual experiences that translate across live events and digital media. Our team is experienced in large-scale show management, camera production, and polished post-production workflows.</p>
+    </section>
   </main>
 
   <footer>
     <div class="container" style="text-align:center;color:var(--muted);padding:30px 0">© 2025 LFT Productions</div>
   </footer>
-
-  <div class="modal" id="modal"><div class="media" id="media"></div></div>
-<script>
-  document.querySelectorAll('.card img').forEach(img=>{
-    img.addEventListener('click', ()=> {
-      const modal = document.getElementById('modal');
-      document.getElementById('media').innerHTML = '<img src="'+img.src+'" alt="">';
-      modal.classList.add('open');
-    });
-  });
-  document.getElementById('modal').addEventListener('click', e=>{ if(e.target.id === 'modal') e.target.classList.remove('open');});
-</script>
 </body>
 </html>
