@@ -1,10 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Gallery — LFT Productions</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery — LFT Productions</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .gallery{grid-template-columns:repeat(3,1fr);gap:18px}
+    .gallery img{height:420px;object-fit:cover;border-radius:12px}
+    .intro{max-width:980px;color:var(--muted);margin-bottom:14px}
+    @media(max-width:1000px){
+      .gallery img{height:260px}
+    }
+  </style>
 </head>
 <body>
   <header class="topnav">
@@ -22,18 +30,18 @@
     </div>
   </header>
 
-  <main class="container" style="padding-top:30px">
-    <h2>Gallery</h2>
-    <p style="color:var(--muted)">High-resolution photos from events, shoots and backstage.</p>
+  <main class="container" style="padding-top:28px">
+    <h1>Gallery</h1>
+    <p class="intro">A curated selection of images from our runway shows, editorial shoots and behind-the-scenes moments. Each image represents creative collaboration — designers, hair & make-up, stylists, models and our technical crew working together to create a visual story.</p>
 
-    <div class="gallery" style="margin-top:14px">
-      <img data-src="model1.jpg" src="model1.jpg" alt="">
-      <img data-src="model2.jpg" src="model2.jpg" alt="">
-      <img data-src="model3.jpg" src="model3.jpg" alt="">
-      <img data-src="model4.jpg" src="model4.jpg" alt="">
-      <img data-src="model5.jpg" src="model5.jpg" alt="">
-      <img data-src="model6.jpg" src="model6.jpg" alt="">
-      <img data-src="model7.jpg" src="model7.jpg" alt="">
+    <div class="gallery" style="margin-top:12px">
+      <img src="model1.jpg" alt="" data-src="model1.jpg">
+      <img src="model2.jpg" alt="" data-src="model2.jpg">
+      <img src="model3.jpg" alt="" data-src="model3.jpg">
+      <img src="model4.jpg" alt="" data-src="model4.jpg">
+      <img src="model5.jpg" alt="" data-src="model5.jpg">
+      <img src="model6.jpg" alt="" data-src="model6.jpg">
+      <img src="model7.jpg" alt="" data-src="model7.jpg">
     </div>
   </main>
 
@@ -42,15 +50,15 @@
   </footer>
 
   <div class="modal" id="modal"><div class="media" id="media"></div></div>
-  <script>
-    document.querySelectorAll('.gallery img').forEach(img=>{
-      img.addEventListener('click', ()=> {
-        const m = document.getElementById('modal');
-        document.getElementById('media').innerHTML = '<img src="'+img.dataset.src+'" alt="">';
-        m.classList.add('open');
-      });
+<script>
+  document.querySelectorAll('.gallery img').forEach(img=>{
+    img.addEventListener('click', ()=> {
+      const m = document.getElementById('modal');
+      document.getElementById('media').innerHTML = '<img src="'+img.dataset.src+'" alt="" style="max-width:100%;border-radius:10px">';
+      m.classList.add('open');
     });
-    document.getElementById('modal').addEventListener('click', e=>{ if(e.target.id === 'modal') e.target.classList.remove('open');});
-  </script>
+  });
+  document.getElementById('modal').addEventListener('click', e=>{ if(e.target.id==='modal') e.target.classList.remove('open')});
+</script>
 </body>
 </html>
