@@ -3,9 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LFT Productions</title>
+  <title>LFT Productions — Where Fashion Meets Film</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Page-specific overrides to make hero larger and content feel bigger */
+    .hero-bg{padding:110px 0 60px}
+    .hero{gap:44px}
+    .hero-card{padding:28px;border-radius:16px}
+    .title h1{font-size:44px;line-height:1.05}
+    .lead{font-size:18px;max-width:100%}
+    .hero-media img{height:520px;object-fit:cover;width:100%;display:block;border-radius:14px}
+    .grid-3 .card img{height:240px}
+    .gallery img{height:260px}
+    @media(max-width:1000px){
+      .hero-media img{height:320px}
+      .title h1{font-size:28px}
+    }
+  </style>
 </head>
 <body>
   <header class="topnav">
@@ -28,23 +43,22 @@
 
   <section class="hero-bg">
     <div class="container hero">
-      <div class="hero-card">
-        <h1 style="margin:0 0 8px;font-family:Montserrat">Where Fashion Meets Film</h1>
-        <p class="lead">LFT Productions creates runway experiences, music videos and cinematic events. We handle creative direction, production and talent management — bringing high-end visuals & flawless execution.</p>
-        <div class="ctas">
-          <a class="btn-primary" href="portfolio.html">View Portfolio</a>
-          <a class="btn-ghost" href="contact.html">Book a Project</a>
+      <div class="hero-card" style="max-width:900px">
+        <h1 style="margin:0 0 8px;font-family:Montserrat">We design high-fashion runway experiences & cinematic music visuals.</h1>
+        <p class="lead">LFT Productions combines creative direction, production design and technical execution to produce memorable fashion shows, music videos and short films. We work with designers, choreographers, stylists and directors — delivering end-to-end production: concept, casting, stage design, lighting, filming and post production. Our portfolio includes runway events, editorial shoots and festival-screened short films.</p>
+
+        <div class="ctas" style="margin-top:20px">
+          <a class="btn-primary" href="portfolio.html">Explore Portfolio</a>
+          <a class="btn-ghost" href="contact.html">Discuss a Project</a>
         </div>
-        <div style="margin-top:14px;display:flex;gap:8px;color:var(--muted);font-size:13px">
-          <div class="tag">Delhi • Worldwide</div>
-          <div class="tag">Casting • Production • Events</div>
+
+        <div style="margin-top:18px;color:var(--muted);font-size:14px">
+          <strong>Specialities:</strong> Full scale runway production · Creative direction · Casting & talent management · Cinematic music videos · Post production.
         </div>
       </div>
 
-      <div style="max-width:480px">
-        <div style="border-radius:14px;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,0.6)">
-          <img src="model1.jpg" alt="hero" style="width:100%;height:360px;object-fit:cover;display:block">
-        </div>
+      <div class="hero-media" style="max-width:540px">
+        <img src="model1.jpg" alt="Hero image — LFT Productions">
       </div>
     </div>
   </section>
@@ -52,66 +66,62 @@
   <main class="container">
     <section class="section">
       <div style="display:flex;justify-content:space-between;align-items:center">
-        <h3 style="margin:0">Latest Productions</h3>
-        <a href="portfolio.html" style="color:var(--muted);text-decoration:none">See all</a>
+        <h3 style="margin:0">Featured Productions</h3>
+        <a href="portfolio.html" style="color:var(--muted);text-decoration:none">View full portfolio</a>
       </div>
 
-      <div class="grid-3" style="margin-top:12px">
+      <div class="grid-3" style="margin-top:16px">
         <div class="card">
-          <img src="model2.jpg" alt="production" style="width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:10px">
-          <h3>Runway — Mystique</h3>
-          <p class="muted">Complete production management and live show direction.</p>
+          <img src="model2.jpg" alt="Mystique Fashion Show">
+          <h3>Mystique Fashion Show — Runway Production</h3>
+          <p style="color:var(--muted)">Nov 2024 • Role: Production Lead. A large-scale runway show with 20+ designers, live music and bespoke set design. We handled concept, stage layout, lighting cues, model coordination and live staging to ensure seamless transitions between designers.</p>
         </div>
+
         <div class="card">
-          <img src="model3.jpg" alt="music video" style="width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:10px">
-          <h3>Music Video — Fly</h3>
-          <p class="muted">Cinematic short filmed at heritage locations.</p>
+          <img src="model3.jpg" alt="Music Video">
+          <h3>Music Video — “Fly”</h3>
+          <p style="color:var(--muted)">Aug 2024 • Role: Producer & Location Management. A cinematic video filmed across heritage locations with a 30-person crew. Managed permits, production scheduling and post-production grading for a filmic look.</p>
         </div>
+
         <div class="card">
-          <img src="model4.jpg" alt="film" style="width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:10px">
-          <h3>Short Film — Neon Nights</h3>
-          <p class="muted">Indie film festival screenings and post-production.</p>
+          <img src="model4.jpg" alt="Short Film">
+          <h3>Short Film — “Neon Nights”</h3>
+          <p style="color:var(--muted)">Mar 2024 • Role: Line Producer. An indie short that screened at local festivals. We provided production services, casting, and oversaw editing and sound design for festival delivery.</p>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" style="margin-top:36px">
       <div style="display:flex;justify-content:space-between;align-items:center">
         <h3 style="margin:0">Gallery Preview</h3>
-        <a href="gallery.html" style="color:var(--muted);text-decoration:none">More photos</a>
+        <a href="gallery.html" style="color:var(--muted);text-decoration:none">Explore gallery</a>
       </div>
-      <div class="gallery" style="margin-top:12px">
+      <div class="gallery" style="margin-top:14px">
         <img src="model5.jpg" alt="" data-src="model5.jpg">
         <img src="model6.jpg" alt="" data-src="model6.jpg">
         <img src="model7.jpg" alt="" data-src="model7.jpg">
       </div>
     </section>
-
   </main>
 
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
       <div style="color:var(--muted)">© 2025 LFT Productions</div>
-      <div style="color:var(--muted)"><a href="https://instagram.com/lftproduction" target="_blank" style="color:var(--gold);text-decoration:none">Instagram</a> · <a href="#" style="color:var(--gold);text-decoration:none">YouTube</a></div>
+      <div style="color:var(--muted)"><a href="https://instagram.com/lftproduction" target="_blank" style="color:var(--gold);text-decoration:none">Instagram</a></div>
     </div>
   </footer>
 
-  <!-- modal -->
   <div class="modal" id="modal"><div class="media" id="media"></div></div>
-
 <script>
-  // gallery modal
   document.querySelectorAll('.gallery img').forEach(img=>{
     img.addEventListener('click', ()=> {
       const modal = document.getElementById('modal');
       const media = document.getElementById('media');
-      media.innerHTML = '<img src="'+img.dataset.src+'" alt="">';
+      media.innerHTML = '<img src="'+img.dataset.src+'" alt="" style="max-width:100%">';
       modal.classList.add('open');
     });
   });
-  document.getElementById('modal').addEventListener('click', e=>{
-    if(e.target.id === 'modal') e.target.classList.remove('open');
-  });
+  document.getElementById('modal').addEventListener('click', e=>{ if(e.target.id==='modal') e.target.classList.remove('open')});
 </script>
 </body>
 </html>
