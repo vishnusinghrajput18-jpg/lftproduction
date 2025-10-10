@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Gallery — LFT Productions</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topnav">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+      <a href="index.html" class="brand">
+        <div class="logo"><img src="lft-logo.jpg" alt="LFT" /></div>
+        <div class="title"><h2 style="margin:0">LFT Productions</h2><p style="margin:4px 0 0;color:#9aa3ad;font-size:13px">Fashion • Music • Films</p></div>
+      </a>
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:30px">
+    <h2>Gallery</h2>
+    <p style="color:var(--muted)">High-resolution photos from events, shoots and backstage.</p>
+
+    <div class="gallery" style="margin-top:14px">
+      <img data-src="model1.jpg" src="model1.jpg" alt="">
+      <img data-src="model2.jpg" src="model2.jpg" alt="">
+      <img data-src="model3.jpg" src="model3.jpg" alt="">
+      <img data-src="model4.jpg" src="model4.jpg" alt="">
+      <img data-src="model5.jpg" src="model5.jpg" alt="">
+      <img data-src="model6.jpg" src="model6.jpg" alt="">
+      <img data-src="model7.jpg" src="model7.jpg" alt="">
+    </div>
+  </main>
+
+  <footer>
+    <div class="container" style="text-align:center;color:var(--muted);padding:30px 0">© 2025 LFT Productions</div>
+  </footer>
+
+  <div class="modal" id="modal"><div class="media" id="media"></div></div>
+  <script>
+    document.querySelectorAll('.gallery img').forEach(img=>{
+      img.addEventListener('click', ()=> {
+        const m = document.getElementById('modal');
+        document.getElementById('media').innerHTML = '<img src="'+img.dataset.src+'" alt="">';
+        m.classList.add('open');
+      });
+    });
+    document.getElementById('modal').addEventListener('click', e=>{ if(e.target.id === 'modal') e.target.classList.remove('open');});
+  </script>
+</body>
+</html>
