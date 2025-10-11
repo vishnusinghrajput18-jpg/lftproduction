@@ -7,6 +7,40 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    /* --- hero full-right-image adjustments --- */
+.hero-bg{padding:60px 0 50px}
+.hero{display:flex;gap:40px;align-items:stretch;min-height:680px} /* taller hero */
+.hero-card{flex:1;align-self:center;display:flex;flex-direction:column;justify-content:center;padding:34px;border-radius:16px}
+.title h1{font-size:44px}
+.hero-media{flex:0 0 420px;display:flex;align-items:center;justify-content:center;position:relative}
+.hero-media .full-img{
+  width:auto;
+  height:100%;
+  max-height:760px; /* ensures it doesn't overflow on large screens */
+  object-fit:contain; /* keep entire people visible */
+  border-radius:14px;
+  box-shadow: 0 30px 60px rgba(2,6,12,0.65);
+  display:block;
+}
+
+/* lower details area */
+.more-details{margin-top:40px;display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+.detail-cards{display:grid;gap:16px}
+.detail-card{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 24px rgba(0,0,0,0.6)}
+.detail-card h4{color:var(--gold);margin:0 0 8px}
+.kpi-row{display:flex;gap:18px;margin-top:14px}
+.kpi{background:linear-gradient(180deg,rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:10px;min-width:120px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,0.6)}
+.kpi strong{display:block;font-size:20px;color:#fff}
+.kpi span{font-size:13px;color:var(--muted)}
+
+/* responsive tweaks */
+@media(max-width:1000px){
+  .hero{flex-direction:column;min-height:auto}
+  .hero-media{width:100%;flex:unset}
+  .hero-media .full-img{height:360px;width:100%;max-height:420px;object-fit:cover}
+  .more-details{grid-template-columns:1fr}
+}
+
     /* Page-specific overrides to make hero larger and content feel bigger */
     .hero-bg{padding:110px 0 60px}
     .hero{gap:44px}
